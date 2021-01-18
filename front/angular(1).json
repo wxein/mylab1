@@ -25,11 +25,11 @@
               "src/theme.scss",
               "src/styles.css",
               "node_modules/@progress/kendo-theme-bootstrap/dist/all.css",
-              "node_modules/@ztree/ztree_v3/css/zTreeStyle.css"
+              "node_modules/@ztree/ztree_v3/css/zTreeStyle/zTreeStyle.css"
             ],
             "scripts": [
               "node_modules/file-saver/dist/FileSaver.min.js",
-              "node_modules/juqery/dist/jquery.min.css",
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/@ztree/ztree_v3/js/jquery.ztree.all.js"
             ]
           },
