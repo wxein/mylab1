@@ -1,3 +1,32 @@
+package com.dbs.celerity.queryrunner.api.s3query;
+
+import com.dbs.celerity.queryrunner.model.S3MetaData;
+import com.dbs.celerity.queryrunner.service.metadata.S3MetaDataService;
+import com.dbs.celerity.queryrunner.service.s3query.S3QueryService;
+import com.dbs.celerity.queryrunner.userdata.converter.EntityDtoConverter;
+import com.dbs.celerity.queryrunner.userdata.dto.S3QueryDto;
+import com.dbs.celerity.queryrunner.userdata.entity.S3Query;
+import com.dbs.celerity.queryrunner.userdata.repo.S3QueryRepo;
+import com.dbs.celerity.queryrunner.webauth.UserRequestContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static org.springframework.http.ResponseEntity.notFound;
+import static org.springframework.http.ResponseEntity.ok;
+
+/**
+ * Controls API called from Query Runner.
+ */
 @RestController
 @RequestMapping("/s3query")
 public class S3QueryController {
